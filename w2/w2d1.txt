@@ -1,0 +1,43 @@
+Tugas nomor 1
+
+STORE "massa_benda" to 600
+STORE "percepatan_benda" to 2
+STORE "resultan" without any value
+CALCULATE "massa_benda" times "percepatan_benda"
+SET "resultan" value with calculation result
+DISPLAY "resultan"
+
+Tugas nomor 2
+
+READ and SAVE "year"
+IF ("year" modulo 4 == 0)
+	DO ELSEIF ("year" modulo 100 == 1)
+		DO DISPLAY (Tahun "year" adalah tahun kabisat)
+	DO ELSEIF ("year" modulo 100 == 0 AND "year" modulo 400 == 0)
+		DO DISPLAY (Tahun "year" adalah tahun kabisat)
+	ELSE
+		DO DISPLAY (Tahun "year" bukan tahun kabisat)
+ELSE
+	DO DISPLAY (Tahun "year" bukan tahun kabisat)
+	
+Tugas nomor 3
+
+STORE "jumlah_pakaian" to 20;
+STORE "hitung_pakaian" to 0;
+WHILE "jumlah_pakaian" != 0
+	DO minus "jumlah_pakaian" by 1 AND add "hitung_pakaian" by 1
+ENDWHILE
+DISPLAY "hitung_pakaian"
+
+Tugas nomor 4
+
+STORE "jumlah_siswa" to 40
+WHILE "jumlah_siswa" != 0
+	IF ("Kuku panjang")
+		DO DISPLAY "guru menghukum siswa/siswi"
+	ELSE 
+		DO DISPLAY "guru memuji siswa/siswi"
+	
+	DO minus "jumlah_siswa" by 1
+ENDWHILE
+
