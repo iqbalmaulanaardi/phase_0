@@ -59,4 +59,3 @@ WHILE "jumlah_siswa" != 0
 	
 	DO minus "jumlah_siswa" by 1
 ENDWHILE
-
