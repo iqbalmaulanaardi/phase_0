@@ -1,12 +1,13 @@
 function konversiMenit(angka) {
-    var jam, menit, nol, menitStr;
+    var jam, menit, nol;
     nol = "0";
     jam = 0;
+    menit = angka % 60;
+
     while (angka >= 60) {
         jam++;
         angka -= 60;
     }
-    menit = angka % 60;
     if (menit < 10) {
         menit = nol.concat(String(menit));
     }
