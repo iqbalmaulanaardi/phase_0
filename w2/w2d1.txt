@@ -11,18 +11,23 @@ DISPLAY "resultan"
 Tugas nomor 2
 
 Algoritma:
-1. input tahun("year")
-2. jika nilai "year" modulo 4 sama dengan nol, maka jika nilai "year" modulo 100 sama dengan 1, maka tampilan Tahun "year" adalah tahun kabisat, jika tidak maka jika nilai "year" modulo 100 sama dengan 0 dan nilai "year modulo 400 sama dengan 0, maka tampilkan Tahun "year" adalah tahun kabisat jika tidak maka tampilkan Tahun "year" bukan tahun kabisat.
+1. input tahun"year"
+2. jika nilai "year" modulo 4 sama dengan nol, maka jalankan step 2a
+2a) jika nilai "year" modulo 100 sama dengan 1, maka jalankan step 3a
+	3a)tampilan Tahun "year" adalah tahun kabisat, jika tidak maka jalankan step 3b)
+	3b)jika nilai "year" modulo 100 sama dengan 0 dan nilai "year modulo 400 sama dengan 0, maka jalankan step 4a)
+		4a) tampilkan Tahun "year" adalah tahun kabisat jika tidak maka jalankan step 4b)
+		4b)tampilkan Tahun "year" bukan tahun kabisat.
 
 Pseudocode:
 READ and SAVE "year"
-IF ("year" modulo 4 == 0)
-	DO IF("year" modulo 100 == 1)
-		DO DISPLAY (Tahun "year" adalah tahun kabisat)
-	DO ELSEIF ("year" modulo 100 == 0 AND "year" modulo 400 == 0)
-		DO DISPLAY (Tahun "year" adalah tahun kabisat)
+IF "year" modulo 4 is equal to 0
+	DO IF"year" modulo 100 is equal to 1
+		DO DISPLAY Tahun "year" adalah tahun kabisat
+	DO ELSEIF "year" modulo 100 is equal to 0 AND "year" modulo 400 is equal to 0
+		DO DISPLAY Tahun "year" adalah tahun kabisat
 ELSE
-		DO DISPLAY (Tahun "year" bukan tahun kabisat)
+	DO DISPLAY Tahun "year" bukan tahun kabisat
 	
 Tugas nomor 3
 
@@ -32,27 +37,31 @@ Algoritma:
 3. ulangi step 4 selama jumlah pakaian tidak sama dengan 0
 4. Kurangi nilai "jumlah_pakaian" dengan 1 dan tambah "hitung_pakaian" dengan 1
 5. tampilkan nilai "hitung_pakaian"
+6. jalankan mesin cuci
 
 Psedocode:
-STORE "jumlah_pakaian" to 20;
-STORE "hitung_pakaian" to 0;
-WHILE "jumlah_pakaian" != 0
+STORE "jumlah_pakaian" to 20
+STORE "hitung_pakaian" to 0
+WHILE "jumlah_pakaian" is not equal to 0
 	DO minus "jumlah_pakaian" by 1 AND add "hitung_pakaian" by 1
 ENDWHILE
 DISPLAY "hitung_pakaian"
+DISPLAY "jalankan mesin cuci"
 
 Tugas nomor 4
 
 Algoritma:
 1. simpan nilai "jumlah_siswa" dengan angka 40
 2. ulangi step 3 selama nilai "jumlah_siswa" tidak sama dengan 0
-3. Jika nilai "kuku_panjang" sama dengan true maka tampilkan "guru menghukum siswa/siswi", jika tidak maka tampilkan "guru memuji siswa/siswi"
+3. Jika nilai "kuku_panjang" sama dengan true maka jalankan steo 3a)
+	3a) tampilkan "guru menghukum siswa/siswi", jika tidak maka jalankan step 3b)
+	3b) tampilkan "guru memuji siswa/siswi"
 
 Pseudocode:
 STORE "jumlah_siswa" to 40
 STORE "kuku_panjang" with any value
-WHILE "jumlah_siswa" != 0
-	IF ("kuku_panjang" == true)
+WHILE "jumlah_siswa" is not equal to 0
+	IF "kuku_panjang" is equal to true
 		DO DISPLAY "guru menghukum siswa/siswi"
 	ELSE 
 		DO DISPLAY "guru memuji siswa/siswi"
