@@ -1,6 +1,9 @@
-var input = 'Hello world!';
-var output = '';
-for (var index = input.length; index >= 1; index--) {
-    output += input[index - 1]
+function balikString(input) {
+    var output = '';
+    for (var index = input.length; index >= 1; index--) {
+        output += input[index - 1]
+    }
+    return output
 }
-console.log(output)
+
+console.log(balikString('Hello world!'))
