@@ -1,3 +1,5 @@
+'use strict'
+
 function palindrome(input) {
     var output = '';
     for (var index = input.length; index >= 1; index--) {

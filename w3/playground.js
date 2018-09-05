@@ -1,3 +1,20 @@
+/* 
+54321
+5432
+543
+54
+5
+*/
+var masukan = 5;
+
+for (var index = masukan; index > 0; index--) {
+    var tmp = '';
+    for (var j = masukan; j > (masukan - index); j--) {
+        tmp += j
+    }
+    console.log(tmp)
+}
+
 // function kalkulasi(statement) {
 //     var angka1 = ''
 //     var angka2 = ''
@@ -44,15 +61,15 @@ rows = 5
 ****
 *****
 */
-var i = 0;
-var rows2 = 5;
-var str = "*"
-var j = 0
-while (i < rows2) {
-    while (j < i) {
-        str = str + "*";
-        j++;
-    }
-    console.log(str)
-    i++;
-}
+// var i = 0;
+// var rows2 = 5;
+// var str = "*"
+// var j = 0
+// while (i < rows2) {
+//     while (j < i) {
+//         str = str + "*";
+//         j++;
+//     }
+//     console.log(str)
+//     i++;
+// }
