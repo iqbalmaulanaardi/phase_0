@@ -52,7 +52,15 @@ function dataHandling2(input) {
     }
     arrHasilSplit.sort(function(value1, value2) {
         return value1 < value2
-    })
+    });
+    //balikan ke number lagi
+    for (var index = 0; index < arrHasilSplit.length; index++) {
+        if (arrHasilSplit[index] <= 9) {
+            arrHasilSplit[index] = "0" + String(arrHasilSplit[index])
+        } else {
+            arrHasilSplit[index] = String(arrHasilSplit[index])
+        }
+    }
     console.log(arrHasilSplit)
 
     //untuk join
@@ -63,5 +71,5 @@ function dataHandling2(input) {
     var arrSlice = input[1]
     console.log(arrSlice.slice(0, 14))
 }
-var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/12/1989", "Membaca"];
+var input = ["0001", "Roman Alamsyah", "Bandar Lampung", "21/05/1989", "Membaca"];
 dataHandling2(input);

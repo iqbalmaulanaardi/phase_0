@@ -4,55 +4,51 @@ function sorting(arrNumber) {
     //     return value1 > value2
 
     // })
+    //cara manual
     var tmp = 0;
     for (var i = 0; i < arrNumber.length; i++) {
         //ascending
-        for (var j = arrNumber.length - 1; j >= 0; j--) {
-            if (arrNumber[j] < arrNumber[j - 1]) {
-                tmp = arrNumber[j]
-                arrNumber[j] = arrNumber[j - 1]
-                arrNumber[j - 1] = tmp
-            }
-        }
-        // descending
-        // for (var j = 0; j < arrNumber.length; j++) {
-        //     if (arrNumber[j] < arrNumber[j + 1]) {
+        // for (var j = arrNumber.length - 1; j >= 0; j--) {
+        //     if (arrNumber[j] < arrNumber[j - 1]) {
         //         tmp = arrNumber[j]
-        //         arrNumber[j] = arrNumber[j + 1]
-        //         arrNumber[j + 1] = tmp
+        //         arrNumber[j] = arrNumber[j - 1]
+        //         arrNumber[j - 1] = tmp
         //     }
         // }
+        // descending
+        for (var j = 0; j < arrNumber.length; j++) {
+            if (arrNumber[j] < arrNumber[j + 1]) {
+                tmp = arrNumber[j]
+                arrNumber[j] = arrNumber[j + 1]
+                arrNumber[j + 1] = tmp
+            }
+        }
     }
+    console.log(arrNumber)
     return arrNumber
 }
 
 function getTotal(arrNumber) {
     // code di sini
-
-    //menghitung berapa kali muncul tiap angka
-    var total = []
-    for (var i = 0; i < arrNumber.length; i++) {
-        total[i] = 0;
-        for (var j = 0; j < arrNumber.length; j++) {
-            if (arrNumber[i] == arrNumber[j]) {
-                total[i]++;
-            }
+    var angkaTerbesar = arrNumber[0]
+    var counter = 0
+    for (var index = 0; index < arrNumber.length; index++) {
+        if (arrNumber[index] === angkaTerbesar) {
+            counter++
         }
     }
-    //menentukan nilai yang paling sering muncul
-    var k = 1
-    for (var i = 0; i < total.length; i++) {
-        if (total[i] > k) {
-            k = total[i]
-        }
-    }
-    console.log(total)
+    return 'angka paling besar adalah ' + angkaTerbesar + ' dan jumlah kemunculan sebanyak ' + counter + ' kali'
 }
 
 function mostFrequentLargestNumbers(arrNumber) {
     var listSort = sorting(arrNumber);
     var countHighest = getTotal(listSort);
-    return listSort;
+    if (arrNumber.length !== 0) {
+        return countHighest;
+    } else {
+        return ''
+    }
+
 }
 
 console.log(mostFrequentLargestNumbers([2, 8, 4, 6, 8, 5, 8, 4]));
