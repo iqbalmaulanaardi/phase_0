@@ -1,15 +1,27 @@
 'use strict'
 
 function palindrome(input) {
-    var output = '';
-    for (var index = input.length; index >= 1; index--) {
-        output += input[index - 1]
+    //cara ke 1
+    // var output = '';
+    // for (var index = input.length; index >= 1; index--) {
+    //     output += input[index - 1]
+    // }
+    // if (input === output) {
+    //     return true
+    // } else {
+    //     return false
+    // }
+    //cara ke 2
+    var i = 0
+    var j = input.length - 1
+    while (i <= j) {
+        if (input[i] !== input[j]) {
+            return false
+        }
+        i++;
+        j--;
     }
-    if (input === output) {
-        return true
-    } else {
-        return false
-    }
+    return true
 }
 // TEST CASES
 console.log(palindrome('katak')); // true

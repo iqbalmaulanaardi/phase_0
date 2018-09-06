@@ -1,19 +1,35 @@
-/* 
-54321
-5432
-543
-54
+/*
+12345
+2345
+345
+45
 5
+num :5
 */
-var masukan = 5;
-
-for (var index = masukan; index > 0; index--) {
-    var tmp = '';
-    for (var j = masukan; j > (masukan - index); j--) {
-        tmp += j
+var num = 5;
+for (var i = 1; i <= num; i++) {
+    var str = ""
+    for (var j = i; j <= num; j++) {
+        str += j
     }
-    console.log(tmp)
+    console.log(str)
 }
+// /* 
+// 54321
+// 5432
+// 543
+// 54
+// 5
+// */
+// var masukan = 5;
+
+// for (var index = masukan; index > 0; index--) {
+//     var tmp = '';
+//     for (var j = masukan; j > (masukan - index); j--) {
+//         tmp += j
+//     }
+//     console.log(tmp)
+// }
 
 // function kalkulasi(statement) {
 //     var angka1 = ''

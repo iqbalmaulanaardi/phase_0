@@ -1,9 +1,15 @@
 function balikKata(kalimat) {
-    var tmp = kalimat.length;
+    //cara 1 looping while
+    // var tmp = kalimat.length;
     var tmp_kalimat = "";
-    while (tmp >= 0) {
-        tmp_kalimat += kalimat.charAt(tmp - 1);
-        tmp--;
+    // while (tmp > 0) {
+    //     tmp_kalimat += kalimat[tmp - 1];
+    //     tmp--;
+    // }
+    //cara 2 looping for
+    for (var i = kalimat.length; i > 0; i--) {
+        tmp_kalimat += kalimat[i - 1];
+
     }
     return tmp_kalimat;
 }
