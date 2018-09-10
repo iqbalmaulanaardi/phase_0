@@ -8,9 +8,9 @@ function pasanganTerbesar(num) {
     }
     //sorting descending
     tmp.sort(function(value1, value2) {
-            return value1 < value2
-        })
-        //secara otomatis pasangan nilai 2 digit paling besar ada pada array index 0
+        return value1 < value2
+    });
+    //secara otomatis pasangan nilai 2 digit paling besar ada pada array index 0
     return tmp[0];
 
 }

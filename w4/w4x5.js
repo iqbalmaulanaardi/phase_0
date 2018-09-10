@@ -3,7 +3,6 @@ function ubahHuruf(kata) {
     //buat string a sampe z
     var alfabet = 'abcdefghijklmnopqrstuvwxyz';
     var output = '';
-    var angka = 0;
     for (var index = 0; index < kata.length; index++) {
         output += alfabet[alfabet.indexOf(kata[index]) + 1]
     }

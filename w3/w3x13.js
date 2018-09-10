@@ -1,7 +1,7 @@
 function targetTerdekat(arr) {
     var counter_spasi = 0
-    var status_x = false
-        //cek ada 'x' atau tidak
+    var status_x = false;
+    //cek ada 'x' atau tidak
     for (var x = 0; x < arr.length; x++) {
         if (arr[x] === 'x') {
             status_x = true
