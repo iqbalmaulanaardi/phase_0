@@ -2,7 +2,8 @@ function groupAnimals(animals) {
     animals.sort()
     var cari = animals[0][0]
     var arrOutput = []
-    var arrTmp = []
+    var arrTmp = [];
+    // console.log(animals)
     for (var i = 0; i < animals.length; i++) {
         if (cari === animals[i][0]) {
             arrTmp.push(animals[i])
@@ -16,6 +17,14 @@ function groupAnimals(animals) {
     }
     if (arrTmp.length !== 0) {
         arrOutput.push(arrTmp)
+    }
+    // console.log(arrOutput)
+    var alfabet = 'abcdefghijklmnopqrstuvwxyz'
+    var tmp = ''
+    for (var i = 0; i < arrOutput.length; i++) {
+        arrOutput[i].sort(function(value1, value2) {
+            return value1 < value2
+        })
     }
     return arrOutput
 }
