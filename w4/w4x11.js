@@ -9,7 +9,7 @@ function changeMe(arr) {
             myObj.firstName = arr[i][0]
             myObj.lastName = arr[i][1]
             myObj.gender = arr[i][2]
-            if (!arr[i][3]) {
+            if (!arr[i][3] || arr[i][3] > 2018) {
                 //false,null,undefined,""
                 myObj.age = "Invalid Birth Year"
             } else {
