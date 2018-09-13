@@ -53,3 +53,4 @@ for (var index = max; index >= 0; index--) {
 for (var i = 0; i < max; i++) {
     console.log(tmp)
 }
+//coba rubah
