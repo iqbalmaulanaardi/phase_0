@@ -4,7 +4,7 @@ function cariModus(arr) {
     var cari_sama = 0
     var output = 0
     for (var x = 0; x < arr.length; x++) {
-        if (cari === arr[x]) {
+        if (cari === arr[x]) { //7===4
             cari_sama = -1
         } else {
             cari_sama = 0
@@ -20,8 +20,7 @@ function cariModus(arr) {
             for (var j = 0; j < arr.length; j++) {
                 if (j !== i) {
                     if (arr[i] === arr[j]) {
-                        counter += 1
-
+                        counter += 1;
                         //lakukan pengecekan nilai output yang paling kecil
                         if (output === 0) {
                             output = arr[i]

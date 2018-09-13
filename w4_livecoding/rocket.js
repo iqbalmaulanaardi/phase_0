@@ -43,19 +43,28 @@ function initialGroupingDescending(studentsArr) {
             }
         }
     }
-    console.log(studentsArr);
+    // console.log(studentsArr);
+    var tmpObj = {};
+
+    //[J, Joni, Jono]
     //mas yoki
     for (var i = 0; i < studentsArr.length; i++) {
-        var isUniqe = true
-        for (var j = 0; j < output.length; j++) {
-
+        tmpObj[studentsArr[i][0]] = 1
+            // tmpObj[studentsArr[i]] = 1
+    }
+    var arrTmp = Object.keys(tmpObj);
+    // console.log(arrTmp);
+    var arrOutput = []
+    for (var j = 0; j < arrTmp.length; j++) {
+        arrOutput.push([arrTmp[j]])
+        for (var k = 0; k < studentsArr.length; k++) {
+            if (arrTmp[j] === studentsArr[k][0]) {
+                arrOutput[j].push(studentsArr[k])
+            }
         }
     }
-    return studentsArr
-
+    return arrOutput;
 }
-
-
 console.log(initialGroupingDescending(['Budi', 'Badu', 'Joni', 'Jono']));
 /*
 [
@@ -64,7 +73,7 @@ console.log(initialGroupingDescending(['Budi', 'Badu', 'Joni', 'Jono']));
 ]
 */
 
-// console.log(initialGroupingDescending(['Mickey', 'Yusuf', 'Donald', 'Ali', 'Gong']));
+console.log(initialGroupingDescending(['Mickey', 'Yusuf', 'Donald', 'Ali', 'Gong']));
 /*
 [
   [ 'Y', 'Yusuf' ],
@@ -75,7 +84,7 @@ console.log(initialGroupingDescending(['Budi', 'Badu', 'Joni', 'Jono']));
 ]
 */
 
-// console.log(initialGroupingDescending(['Rock', 'Stone', 'Brick', 'Rocker', 'Sticker']));
+console.log(initialGroupingDescending(['Rock', 'Stone', 'Brick', 'Rocker', 'Sticker']));
 /*
 [
   [ 'S', 'Stone', 'Sticker' ],

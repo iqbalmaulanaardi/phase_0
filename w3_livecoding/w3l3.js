@@ -42,12 +42,14 @@ Wajib menggunakan looping!
 // SKELETON CODE (Code Sample)
 var max = 10; // isi dengan nilai max!
 // buat variable penampung untuk bilangan ganjil
-var tmp = ""
-    //perulangan dari max hingga ke 0
+var tmp = "";
+//perulangan dari max hingga ke 0
 for (var index = max; index >= 0; index--) {
     //pengecekan bilangan ganjil
     if (index % 2 == 1) {
         tmp += index.toString()
     }
 }
-console.log(tmp)
+for (var i = 0; i < max; i++) {
+    console.log(tmp)
+}
