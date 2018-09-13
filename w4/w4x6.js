@@ -39,7 +39,7 @@ function hitungHuruf(kata) {
         }
         output.push(arrTmp)
     }
-    console.log(output);
+    // console.log(output);
     //variabel untuk tampung,tujuannya agar dipisahkan menjadi satu kata satu array
     arrTmp = [];
     //variabel keluaran tiap kata, satu kata satu array
@@ -104,8 +104,8 @@ function hitungHuruf(kata) {
 }
 
 // TEST CASES
-// console.log(hitungHuruf('Today, is the grea greatest day ever')); // greatest
+console.log(hitungHuruf('Today, is the grea greatest day ever')); // greatest
 console.log(hitungHuruf('I am a passionate developer')); // passionate
-// console.log(hitungHuruf('aku adalah anak gembala')); // adalah
-// console.log(hitungHuruf('rajin pangkal kaya')); // pangkal
-// console.log(hitungHuruf('mengayuh perahu di danau')); // danau
+console.log(hitungHuruf('aku adalah anak gembala')); // adalah
+console.log(hitungHuruf('rajin pangkal kaya')); // pangkal
+console.log(hitungHuruf('mengayuh perahu di danau')); // danau
