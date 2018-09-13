@@ -12,7 +12,7 @@ function shoppingTime(memberId, money) {
             changeMoney: money
         }
         if (money >= 1500000) {
-            myObj.listPurchased.push('Sepatu')
+            myObj.listPurchased.push('Sepatu Stacattu')
             money -= 1500000
         }
         if (money >= 500000) {
