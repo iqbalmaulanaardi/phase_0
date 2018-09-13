@@ -24,7 +24,6 @@ function sorting(arrNumber) {
             }
         }
     }
-    console.log(arrNumber)
     return arrNumber
 }
 
