@@ -1,49 +1,27 @@
 function cariModus(arr) {
-    //cek apakah seluruh array isinya sama
-    var cari = arr[0]
-    var cari_sama = 0
-    var output = 0
-    for (var x = 0; x < arr.length; x++) {
-        if (cari === arr[x]) { //7===4
-            cari_sama = -1
+    var objTmp = {};
+    var arrTmp = [];
+    for (var index = 0; index < arr.length; index++) {
+        if (objTmp[arr[index]]) {
+            objTmp[arr[index]] += 1;
         } else {
-            cari_sama = 0
-            break
+            objTmp[arr[index]] = 1;
         }
     }
-    //jika isinya tidak sama(cari_sama = 0) lakukan pencarian modus
-    if (cari_sama === 0) {
-        //variabel untuk hitung banyaknya suatu bilangan pada array
-        var counter = 1
-        for (var i = 0; i < arr.length; i++) {
-            counter = 1
-            for (var j = 0; j < arr.length; j++) {
-                if (j !== i) {
-                    if (arr[i] === arr[j]) {
-                        counter += 1;
-                        //lakukan pengecekan nilai output yang paling kecil
-                        if (output === 0) {
-                            output = arr[i]
-                        } else {
-                            if (arr[i] < output) {
-                                output = arr[i]
-                            } else if (arr[i] >= output) {
-                                output = output
-                            }
-                        }
-                    }
-                }
-
+    if (Object.keys(objTmp).length === 1 || Object.keys(objTmp).length === arr.length) {
+        return -1;
+    } else {
+        var arrIndex = Object.values(objTmp);
+        var angka = 0;
+        var angkaIndex = 0;
+        for (var index = 0; index < arrIndex.length; index++) {
+            if (arrIndex[index] > angka) {
+                angka = arrIndex[index];
+                angkaIndex = index;
             }
         }
-        //pengecekan kalau tiap isi array beda
-        if (output === 0) {
-            output = -1
-        }
-    } else { //else untuk cari_sama = -1
-        output = -1
+        return Object.keys(objTmp)[angkaIndex];
     }
-    return output
 }
 
 // TEST CASES

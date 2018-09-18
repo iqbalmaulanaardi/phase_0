@@ -4,13 +4,12 @@ function totalDigitRekursif(angka) {
         return Number(angkaStr[0])
     } else {
         var tmp = Number(angkaStr[0])
-        var tmp2 = ''
-            //542
+        var tmp2 = '';
+        //542
         for (var i = 0; i < angkaStr.length; i++) {
             if (i !== 0) {
                 tmp2 += angkaStr[i]
             }
-
         }
         return tmp + totalDigitRekursif(Number(tmp2))
     }

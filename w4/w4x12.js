@@ -1,5 +1,5 @@
 function shoppingTime(memberId, money) {
-    if (!memberId) {
+    if (!memberId) { //member id ga berisi
         return "Mohon maaf, toko X hanya berlaku untuk member saja"
     } else if (money < 50000) {
         return "Mohon maaf, uang tidak cukup"
@@ -13,7 +13,7 @@ function shoppingTime(memberId, money) {
         }
         if (money >= 1500000) {
             myObj.listPurchased.push('Sepatu Stacattu')
-            money -= 1500000
+            money = money - 1500000
         }
         if (money >= 500000) {
             myObj.listPurchased.push('Baju Zoro')

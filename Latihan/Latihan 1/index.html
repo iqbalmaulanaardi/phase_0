@@ -1,19 +1,32 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Tugas Anchor DOM!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
+    <script src='script.js'></script>
 </head>
 
 <body>
-    <div id="container">
-        <h1 id="fill-me"></h1>
-        <p class="change-all-of-me"></p>
-        <p class="change-all-of-me"></p>
-        <p class="change-all-of-me"></p>
-        <p class="change-all-of-me"></p>
-        <h2>Change the Inside of H2!</h2>
+    <div class="wrapper">
+        <h1>Quiz</h1>
+        <hr style="width:95%">
+        <form id="quiz" name="quiz">
+            <p id="mc_question">Siapakah siswa hacktiv8 yang lahir di bulan agustus?</p>
+            <div class="mc">
+                <button id="mc1" name="question1" value="Faishal">Faishal<br>
+                <button id="mc2" name="question1" value="Alrifki">Alrifki<br>
+                <button id="mc3" name="question1" value="Stefan">Stefan<br>
+                <button id="mc4" name="question1" value="Dimas">Dimas<br>
+            </div>
+            <hr style="width:95%">
+            <p style="display:block; text-align:left; font-size:11px;">Question 1 of 5</p>
+       </form>
     </div>
-    <script src="script.js"></script>
 </body>
 
 </html>
