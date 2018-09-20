@@ -14,24 +14,18 @@ function addValidationCode(users) {
     var arrOutput = []
     var objTmp = {}
     if (users.length !== 0) {
-        for (var i = 0; i < users.length; i++) {
+        for (var i = 0; i < users.length; i++) { //i
             objTmp['name'] = users[i].name;
             var strTmp = '';
-            for (var j = 0; j < users[i].name.length; j++) {
-                //ganjil
-                if ((users[i].name.length - 1) % 2 === 0) {
-                    if (j !== (users[i].name.length - 1)) {
-                        strTmp += users[i].name[j + 1] + users[i].name[j]
-                    } else {
-                        strTmp += users[i].name[j]
-                    }
-                } else {
-                    //genap
+            // return users[i].name; Antonio
+            for (var j = 0; j < users[i].name.length; j += 2) {
+                if (users[i].name[j + 1] !== undefined) {
                     strTmp += users[i].name[j + 1] + users[i].name[j]
+                } else {
+                    strTmp += users[i].name[j]
                 }
-                j++
             }
-            // return strTmp
+            // return strTmp;
             //split '-'
             var arrTmp = users[i]['join date'].split('-')
             objTmp['validationCode'] = strTmp + arrTmp[0] + arrTmp[1] + arrTmp[2];
@@ -67,15 +61,15 @@ console.log(addValidationCode([{
   },
 ]
  */
-console.log(addValidationCode([{
-        name: 'Cecile',
-        'join date': '01-02-2018'
-    },
-    {
-        name: 'Dominique',
-        'join date': '10-09-2018'
-    },
-]));
+// console.log(addValidationCode([{
+//         name: 'Cecile',
+//         'join date': '01-02-2018'
+//     },
+//     {
+//         name: 'Dominique',
+//         'join date': '10-09-2018'
+//     },
+// ]));
 /**
  Hasil Output
  [
@@ -89,7 +83,7 @@ console.log(addValidationCode([{
   },
 ]
  */
-console.log(addValidationCode([]));
+// console.log(addValidationCode([]));
 /**
  Hasil Output
  []

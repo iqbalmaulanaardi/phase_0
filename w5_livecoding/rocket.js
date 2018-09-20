@@ -19,18 +19,28 @@ RULES
 
 function countLetterRecursive(sentence, letter) {
     // hanya code disini!
-    var counter = 0
-    var strTmp = sentence.slice(1)
-
-    if (sentence.length === 0) {
-        return counter;
+    if (sentence.length <= 1) {
+        if (sentence === letter) {
+            return 1
+        } else {
+            return 0
+        }
+    } else {
+        if (sentence[0] === letter) {
+            var baru = sentence.slice(1)
+            return 1 + countLetterRecursive(baru, letter)
+        } else {
+            var baru = sentence.slice(1)
+            return 0 + countLetterRecursive(baru, letter)
+        }
     }
-    if (sentence[0] === letter) {
-        counter++;
-        // return counter + countLetterRecursive(strTmp, letter)
-
-    }
-    return counter + countLetterRecursive(strTmp, letter)
+    // var counter = 0;
+    // for (var i = 0; i < sentence.length; i++) {
+    //     if (sentence[i] === letter) {
+    //         counter++;
+    //     }
+    // }
+    // return counter;
 }
 
 console.log(countLetterRecursive('12104123', '1')); // 3

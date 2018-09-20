@@ -25,23 +25,64 @@ Aturan coding:
 */
 
 function arrayMerge(firstData, secondData) {
-    // Code disini
-    var objOutput = {}
-    var arrOutput = []
-    if (firstData.length === 0 && secondData.length === 0) {
-        return arrOutput;
-    } else {
-        for (var i = 0; i < firstData.length; i++) {
-            objOutput[firstData[i]] = '';
-            //objOutput = {king: 'asdf'}
+    // Code disini cara 1
+    // var objOutput = {}
+    // var arrOutput = []
+    // if (firstData.length === 0 && secondData.length === 0) {
+    //     return arrOutput;
+    // } else {
+    //     for (var i = 0; i < firstData.length; i++) {
+    //         objOutput[firstData[i]] = '';
+    //         //objOutput = {king: 'asdf'}
+    //     }
+    //     for (var j = 0; j < secondData.length; j++) {
+    //         objOutput[secondData[j]] = '';
+    //         //objOutput = {king: 'qwerty'}
+    //     }
+    //     // return objOutput
+    //     return Object.keys(objOutput);
+    // }
+    //cara 2---------------------
+    // var arrOutput = []
+    // for (var i = 0; i < firstData.length; i++) {
+    //     var status = false;
+    //     //cek
+    //     for (var j = 0; j < arrOutput.length; j++) {
+    //         if (firstData[i] === arrOutput[j]) {
+    //             status = true
+    //         }
+    //     }
+    //     if (status === false) {
+    //         arrOutput.push(firstData[i])
+    //     }
+    // }
+    // for (var k = 0; k < secondData.length; k++) {
+    //     var status = false;
+    //     //cek
+    //     for (var j = 0; j < arrOutput.length; j++) {
+    //         if (secondData[k] === arrOutput[j]) {
+    //             status = true
+    //         }
+    //     }
+    //     if (status === false) {
+    //         arrOutput.push(secondData[k])
+    //     }
+    // }
+    // return arrOutput;
+    //cara 3---------------------
+    for (var i = 0; i < secondData.length; i++) {
+        var isFind = false;
+        for (var j = 0; j < firstData.length; j++) {
+            if (secondData[i] === firstData[j]) {
+                isFind = true;
+                break;
+            }
         }
-        for (var j = 0; j < secondData.length; j++) {
-            objOutput[secondData[j]] = '';
-            //objOutput = {king: 'qwerty'}
+        if (isFind === false) {
+            firstData.push(secondData[i]);
         }
-        // return objOutput
-        return Object.keys(objOutput);
     }
+    return firstData;
 }
 
 // Test cases

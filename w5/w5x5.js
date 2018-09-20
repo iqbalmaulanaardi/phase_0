@@ -1,11 +1,14 @@
 function attack(damage) {
     // Code disini
+    //attack(25)
     return damage - 2;
+    //23
 }
 
 function damageCalculation(numberOfAttacks, damagePerAttack) {
     // Code disini
     return numberOfAttacks * attack(damagePerAttack);
+    // 9 * 23
 }
 
 // TEST CASE
