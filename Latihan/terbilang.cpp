@@ -4,7 +4,7 @@
 #include <cmath>
 
 using namespace std;
-string satuan[] = {    "", "satu ", "dua ", "tiga ", "empat ", "lima ", "enam ", "tuju ", "delapan ", "sembilan " };
+string satuan[] = {"", "satu ", "dua ", "tiga ", "empat ", "lima ", "enam ", "tuju ", "delapan ", "sembilan " };
 
 string konvertAngka(int n) {
     if (n < 0) {
