@@ -21,7 +21,27 @@ output: Rp2.000,00
 */
 
 function formatUang(number) {
-  //code here
+    //code here
+    var numStr = ''
+    var count = 0
+    if (number.toString().length > 3) {
+        for (var i = number.toString().length - 1; i >= 0; i--) {
+            if (count === 3) {
+                numStr += '.'
+                count = 0
+            }
+            numStr += number.toString()[i]
+            count++;
+        }
+        var output = ''
+        for (var j = numStr.length - 1; j >= 0; j--) {
+            output += numStr[j];
+        }
+    } else {
+        output = number.toString()
+    }
+
+    return 'Rp' + output + ',00'
 
 }
 

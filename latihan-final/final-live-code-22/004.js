@@ -22,14 +22,56 @@ OUTPUT:
 PADA MASING-MASING TEST CASE SUDAH TERDAPAT RANGE TERBESAR DAN TERKECIL
 */
 
-function missingNum ( arr ) {
-  // Your code here
-
+function missingNum(arr) {
+    // Your code here
+    var tmp = {} //obj penampung dari arr
+    for (var i = 0; i < arr.length; i++) {
+        for (var j = 0; j < arr.length; j++) {
+            tmp[arr[i][j]] = arr[i][j]
+        }
+    }
+    var arrValues = Object.values(tmp)
+    arrValues.pop(); //hapus spasi
+    var arrOutput = []
+    var array = []
+    for (var i = arrValues[0]; i <= arrValues[arrValues.length - 1]; i++) {
+        array.push(i)
+    }
+    // return array + " ----- " + arrValues
+    for (var i = 0; i < array.length; i++) {
+        var status = false;
+        for (var j = 0; j < arrValues.length; j++) {
+            if (arrValues[j] === array[i]) {
+                status = true;
+                break;
+            }
+        }
+        if (status === false) {
+            arrOutput.push(array[i])
+        }
+    }
+    return arrOutput;
 }
 
 
-console.log(missingNum([[3,' ', 5], [1,' ', 7], [9,' ',' ']])) // [ 2, 4, 6, 8 ]
-console.log(missingNum([[ 2,' '], [' ',5]])) // [ 3, 4 ]
-console.log(missingNum([[11,' ', 13], [17,' ', 19], [' ',16,' ']])) // [ 12, 14, 15, 18 ]
-console.log(missingNum([[3,' ', 5, 15], [1,' ', 7, 13], [9,' ',' ', 12], [' ', 16,' ',' ']])) // [ 2, 4, 6, 8 ]
+console.log(missingNum([
+        [3, ' ', 5],
+        [1, ' ', 7],
+        [9, ' ', ' ']
+    ])) // [ 2, 4, 6, 8 ]
+console.log(missingNum([
+        [2, ' '],
+        [' ', 5]
+    ])) // [ 3, 4 ]
+console.log(missingNum([
+        [11, ' ', 13],
+        [17, ' ', 19],
+        [' ', 16, ' ']
+    ])) // [ 12, 14, 15, 18 ]
+console.log(missingNum([
+        [3, ' ', 5, 15],
+        [1, ' ', 7, 13],
+        [9, ' ', ' ', 12],
+        [' ', 16, ' ', ' ']
+    ])) // [ 2, 4, 6, 8 ]
 console.log(missingNum([])) // []

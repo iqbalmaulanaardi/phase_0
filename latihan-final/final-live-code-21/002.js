@@ -21,25 +21,27 @@ NOTE: Jika angka terakhir tidak memiliki pasangan, maka pasangkan dengan angka p
 RULES:
  - WAJIB MENGGUNAKAN algoritma/pseudocode, tidak menyertakan algoritma/pseudocode maka codingan dianggap tidak valid
 */
+/*
+1. Jika panjang 'str' ganjil maka 'str' di append dengan 'str' index ke 0, agar memasangkan dengan angka pertama
+2. Buat variabel numTmp untuk menampung hasil penjumlahan pasangan genap
+3. Lakukan step 3a mulai dari i=0 hingga i=str.length - 1 dengan incremen i = i+2, agar perulangan berpasangan.
+  3a. jika ('str' index ke i append 'str' index ke i+1) genap maka lakukan step 4a
+    4a. append 'numTmp' dengan tipe Number dari ('str' index ke i append 'str' index ke i+1)
+5. Kembalikan nilai numTmp
+*/
 
-function evenPairsSum (str) {
-  var arr = []
-  for(var i = 0; i < str.length; i = i + 2) {
-    if(str[i+1] === undefined) {
-      arr.push(str[i]+str[0]);
-    } else {
-      arr.push(str[i]+str[i+1])
+function evenPairsSum(str) {
+
+    if (str.length % 2 !== 0) {
+        str += str[0]
     }
-  }
-
-  var hasil = 0;
-  for(var j = 0; j < arr.length; j++) {
-    if(arr[j] % 2 === 0) {
-      hasil += Number(arr[j])
+    var numTmp = 0
+    for (var i = 0; i < str.length - 1; i = i + 2) {
+        if (Number(str[i] + str[i + 1]) % 2 === 0) {
+            numTmp += Number(str[i] + str[i + 1])
+        }
     }
-  }
-
-  return hasil;
+    return numTmp
 }
 
 console.log(evenPairsSum('2044101211')); // 86

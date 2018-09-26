@@ -1,5 +1,4 @@
 function medaliAsianGames(data) {
-    var output = []
     var obj = {}
     for (var i = 0; i < data.length; i++) {
         var negara = data[i][0] //idn
@@ -14,12 +13,12 @@ function medaliAsianGames(data) {
                 perunggu: 0
             }
         }
-        obj[negara][medali] += 1
-            // return obj[negara]
-            // console.log(obj)
-            // return Object.values[obj]
+        obj[negara][medali] += 1;
+        // return obj[negara]
+        // console.log(obj)
+        // return Object.values[obj]
     }
-    return obj
+    return Object.values(obj)
 }
 console.log(medaliAsianGames([
     ['Indonesia', 'emas'],

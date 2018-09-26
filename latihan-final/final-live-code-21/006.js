@@ -15,25 +15,29 @@
 **/
 
 function hapusSimbolRec(str) {
-  var kamus = '0123456789abcdefghijklmnopqrstuvwxyz';
-  var a = str.slice(1);
-
-  if(str.length < 1) {
-    return "";
-  } else {
-    var potong = str.slice(1);
-    for(var i = 0; i < kamus.length; i++) {
-      if(str[0] === kamus[i]) {
-        return str[0] + hapusSimbolRec(potong);
-      }
+    var strings = 'abcdefghijklmnopqrstuvwxyz0123456789'
+    if (str.length === 0) {
+        return '';
+    } else {
+        var isStr = false;
+        for (var i = 0; i < strings.length; i++) {
+            if (str[0] === strings[i]) {
+                isStr = true;
+                break
+            }
+        }
+        if (isStr === false) {
+            return hapusSimbolRec(str.slice(1))
+        } else {
+            return str[0] + hapusSimbolRec(str.slice(1))
+        }
     }
-    return hapusSimbolRec(potong)
-  }
+
 }
 
 
 console.log(hapusSimbolRec('test4@aa')); //test4aa
-// console.log(hapusSimbolRec('devel0p3r s3j@@ati')); // devel0p3rs3jati
-// console.log(hapusSimbolRec('ma@#k!an~')); // makan
-// console.log(hapusSimbolRec('coding')); // coding
-// console.log(hapusSimbolRec('1+3-5*2=100')); // 1352100
+console.log(hapusSimbolRec('devel0p3r s3j@@ati')); // devel0p3rs3jati
+console.log(hapusSimbolRec('ma@#k!an~')); // makan
+console.log(hapusSimbolRec('coding')); // coding
+console.log(hapusSimbolRec('1+3-5*2=100')); // 1352100

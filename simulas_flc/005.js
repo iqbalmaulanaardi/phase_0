@@ -5,25 +5,27 @@ Advanced Seating
 trainSeating adalah sebuah function yang menerima parameter berupa array of object.
 Yang harus mengeluarkan hasil sebuah object yang memiliki isi key berdasarkan jenis gerbong penumpang.
 Yang berisi daftar nama penumpang dan tempat duduk penumpang.
+
 Contoh input dan output bisa dilihat di test case.
+
+
 */
 
 function trainSeating(penumpang) {
-    var obj = {}
+    // your code here
+    var obj = {};
+    // return penumpang[0].seat
     for (var i = 0; i < penumpang.length; i++) {
         if (obj[penumpang[i].gerbong] === undefined) {
-            obj[penumpang[i].gerbong] = [{
-                nama: penumpang[i].nama,
-                seat: penumpang[i].seat
-            }]
-        } else {
-            obj[penumpang[i].gerbong].push({
-                nama: penumpang[i].nama,
-                seat: penumpang[i].seat
-            })
+            obj[penumpang[i].gerbong] = []
         }
+        var objTmp = {
+            nama: penumpang[i].nama,
+            seat: penumpang[i].seat
+        }
+        obj[penumpang[i].gerbong].push(objTmp);
     }
-    return obj
+    return obj;
 }
 
 

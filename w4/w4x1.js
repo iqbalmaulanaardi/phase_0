@@ -14,6 +14,20 @@ function angkaPrima(angka) {
     } else {
         return false
     }
+    // var arrOutput = []
+    // for (var y = 2; y <= angka; y++) {
+    //     var status = true
+    //     for (var x = 2; x < y; x++) {
+    //         if (y % x === 0) {
+    //             status = false
+    //             break;
+    //         }
+    //     }
+    //     if (status === true) {
+    //         arrOutput.push(y)
+    //     }
+    // }
+    // return arrOutput
 }
 // TEST CASES
 console.log(angkaPrima(3)); // true

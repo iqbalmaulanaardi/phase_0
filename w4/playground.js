@@ -6,7 +6,7 @@
 // var mod = [];
 // var total = [];
 // x = 0;
-// //ascending
+// //ascending  wwq
 // for (var i = 0; i < bil.length; i++) {
 //     for (var j = bil.length - 1; j >= 0; j--) {
 //         if (bil[j] < bil[j - 1]) {

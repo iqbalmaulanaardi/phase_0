@@ -23,26 +23,13 @@ Contoh
 */
 
 // Algoritma / Pseudocode here..
-
-STORE `nyawa` with number 3
-STORE `penjahat` with number 0
-STORE `counter` with number 0
-
-STORE `list` with Array
-WHILE(`counter` less than index of `list`) DO
-  IF `list` index `counter` == '@' DO
-    SET and STORE `nyawa` = `nyawa` - 1
-  END
-
-  IF `list` index `counter` == 'Villain' DO
-    SET and STORE `penjahat` = `penjahat` + 1
-  END IF
-
-  SET and STORE `counter` = `counter` + 1
-END WHILE
-
-IF `nyawa` less than or equal 0 DO
-  DISPLAY "Ooops, you die. You got " append `penjahat` append "villains"
-ELSE
-  DISPLAY "Nice work, detective! You got all villains: " append `penjahat`
-END IF
+/* 
+Algoritma //bikin code
+1.Buat variabel nyawa yang diisi dengan nilai 3.
+2.Buat variabel villain yang diisi dengan nilai 0.
+3.lakukan step 4a sebanyak karakter input(input.length-1) kali mulai dari i=0 dengan incremen i = i+1
+    4a. jika input index ke i sama dengan '@' maka nyawa dikurang 1, jika tidak lakukan step 4b
+    4b. jika input index ke i sama dengan 'Villain' maka villain ditambah 1, jika tidak lakukan step 4c
+    4c. jika nyawa sama dengan 0 maka stop proses dan kembalikan nilai 'Ooops, you die. You got' di append dengan nilai villain lalu append kembali dengan ' villains'
+5.kembalikan nilai 'Nice work, detective! You got all villains:' di append dengan nilai villain.
+*/

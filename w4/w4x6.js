@@ -39,6 +39,7 @@ function hitungHuruf(kata) {
         }
         output.push(arrTmp)
     }
+    // return output;
     // console.log(output);
     //variabel untuk tampung,tujuannya agar dipisahkan menjadi satu kata satu array
     arrTmp = [];
@@ -52,6 +53,7 @@ function hitungHuruf(kata) {
 
     }
     // console.log(arrKata);
+    // return arrKata
     //bertujuan untuk mengurutkan array output
     for (var i = 0; i < output.length; i++) {
         for (var j = 0; j < output[i].length; j++) {
@@ -60,6 +62,7 @@ function hitungHuruf(kata) {
             })
         }
     }
+    // return output
     // console.log(output);
     //buat variabel array untuk menampung angka terbesar dari tiap array di array output
     var counter_output = [];
@@ -71,6 +74,7 @@ function hitungHuruf(kata) {
         }
 
     }
+    // return counter_output;
     // console.log(counter_output);
     //buat variabel itung untuk menampung jumlah karakter yang sama pada satu kata
     var itung = 0;
@@ -89,6 +93,7 @@ function hitungHuruf(kata) {
             smntr.push(1)
         }
     }
+    // return smntr;
     // console.log(smntr);
     //cari index angka terbesar dari array smntr dan cocokan dengan arr
     var index_angka = 0
@@ -99,13 +104,14 @@ function hitungHuruf(kata) {
             tmp = index
         }
     }
+    // return index_angka
     // console.log(index_angka)
     return arr[tmp]
 }
 
 // TEST CASES
-console.log(hitungHuruf('Today, is the grea greatest day ever')); // greatest
-console.log(hitungHuruf('I am a passionate developer')); // passionate
+console.log(hitungHuruf('Today, is the greatest day ever')); // greatest
+console.log(hitungHuruf('I am a passionate deveeeeeeeloper')); // passionate
 console.log(hitungHuruf('aku adalah anak gembala')); // adalah
 console.log(hitungHuruf('rajin pangkal kaya')); // pangkal
 console.log(hitungHuruf('mengayuh perahu di danau')); // danau

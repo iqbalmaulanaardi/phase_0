@@ -1,4 +1,3 @@
-
 /*
 Count solo
 ===========
@@ -13,17 +12,23 @@ RULES:
  - TIDAK BOLEH MENGGUNAKAN built in function .indexOf dan .include!
 */
 
-function countSolo (numbers) {
-  var number = numbers.sort((a,b) => { return a - b });
-  var hasil = 0;
-  for(var i = 0; i < number.length; i++) {
-    if(number[i] !== number[i+1] && number[i] !== number[i-1]) {
-      hasil = hasil + number[i]
+function countSolo(numbers) {
+    var output = 0
+    for (var i = 0; i < numbers.length; i++) {
+        var isUniq = true
+        for (var j = 0; j < numbers.length; j++) {
+            if (numbers[i] === numbers[j] && i !== j) {
+                isUniq = false;
+                break
+            }
+        }
+        if (isUniq === true) {
+            output += numbers[i]
+        }
     }
-  }
-  return hasil;
+    return output
 }
 
-console.log(countSolo([ 5, 5, 6, 6, 3, 1, 2, 7, 7])) // 6
-console.log(countSolo([ 3, 6, 3, 6, 1, 1, 2, 1 ]))  // 2
-console.log(countSolo([ 3, 3, 3, 3, 4, 5, 8, 10, 11 ])) // 38
+console.log(countSolo([5, 5, 6, 6, 3, 1, 2, 7, 7])) // 6
+console.log(countSolo([3, 6, 3, 6, 1, 1, 2, 1])) // 2
+console.log(countSolo([3, 3, 3, 3, 4, 5, 8, 10, 11])) // 38

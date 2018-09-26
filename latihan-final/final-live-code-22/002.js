@@ -17,8 +17,43 @@ MAKA OUTPUT = 'HAHAHA ***** LOOO'
                     
 */
 
-function sensorSentence ( sentence, words ) {
-  // Your code here
+function sensorSentence(sentence, words) {
+    // Your code here
+    var arrSplit = []
+    var sentenceTampung = ''
+    for (var i = 0; i < sentence.length; i++) {
+        if (sentence[i] !== ' ') {
+            sentenceTampung += sentence[i]
+        }
+        if (sentence[i] === ' ' || i === sentence.length - 1) {
+            arrSplit.push(sentenceTampung)
+            sentenceTampung = ''
+        }
+    }
+    var star = ''
+    var index = 0
+        //mengakses data satu persatu berdasarkan loop. return kembalikan nilai
+    for (var j = 0; j < arrSplit.length; j++) {
+        if (arrSplit[j] === words) {
+            for (var k = 0; k < arrSplit[j].length; k++) {
+                star += '*'
+            }
+            index = j;
+        }
+    }
+    if (star === '') {
+        return sentence
+    } else {
+        arrSplit[index] = star
+        var outputStr = ''
+        for (var l = 0; l < arrSplit.length; l++) {
+            outputStr += arrSplit[l]
+            if (l !== arrSplit.length - 1) {
+                outputStr += ' '
+            }
+        }
+        return outputStr
+    }
 }
 
 

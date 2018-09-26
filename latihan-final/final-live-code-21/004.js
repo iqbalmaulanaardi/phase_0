@@ -36,25 +36,35 @@ NOTE:
 
 
 function squareNumber(num) {
-  var arr = [];
-  var counter = 0;
-  // perulangan untuk menyimpan banyak sub array
-  for(var i = 0; i < num; i++) {
-    var arrDalem = [];
-    // menyimpan nilai dalam sub array
-    for(var j = 0; j < num; j++) {
-      counter++;
-      arrDalem.push(counter);
-    }
-    if(i % 2 !== 0) {
-      arr.push(arrDalem.reverse());
+    if (num < 3) {
+        return 'Minimal input adalah 3'
     } else {
-      arr.push(arrDalem);
+        var arrOutput = []
+        var counter = Math.pow(num, 2)
+            // return counter
+        for (var i = 0; i < num; i++) {
+            arrOutput.push([])
+            for (var j = 0; j < num; j++) {
+                arrOutput[i].push(counter)
+                counter--
+            }
+            if (num % 2 === 1) {
+                if (i % 2 === 0) {
+                    arrOutput[i].sort(function(value1, value2) {
+                        return value1 > value2
+                    })
+                }
+            } else {
+                if (i % 2 === 1) {
+                    arrOutput[i].sort(function(value1, value2) {
+                        return value1 > value2
+                    })
+                }
+            }
+
+        }
     }
-  }
-
-  return arr.reverse();
-
+    return arrOutput
 }
 
 console.log(squareNumber(3));
