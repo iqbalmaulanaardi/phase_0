@@ -40,6 +40,8 @@ h1 {
 
 div.buttons {
     padding-left: 15px;
+    width: 50%;
+    display: inline;
 }
 
 .wrapper {
