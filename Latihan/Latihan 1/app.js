@@ -13,7 +13,6 @@ function populate() {
             element.innerHTML = choices[i];
             guess("btn" + i, choices[i]);
         }
-
         showProgress();
     }
 };
@@ -33,9 +32,20 @@ function showProgress() {
     element.innerHTML = "Question " + currentQuestionNumber + " of " + quiz.questions.length;
 };
 
+
 function showScores() {
     var gameOverHTML = "<h1>Result</h1><hr>";
-    gameOverHTML += "<h2 id='score'> Your scores: " + quiz.score + "</h2>";
+    // var x = document.getElementById("myText").value;
+    // gameOverHTML += "<h2 id='score'> Hello " + x + " </h2>";
+    if (quiz.score < 3) {
+        gameOverHTML += "<h2 id='score'> Try harder, your scores is: " + quiz.score + "</h2>";
+    }
+    if (quiz.score === 3) {
+        gameOverHTML += "<h2 id='score'> Not Bad, your scores is: " + quiz.score + "</h2>";
+    }
+    if (quiz.score > 3) {
+        gameOverHTML += "<h2 id='score'> Good Job, your scores is: " + quiz.score + "</h2>";
+    }
     var element = document.getElementById("quiz");
     element.innerHTML = gameOverHTML;
 };

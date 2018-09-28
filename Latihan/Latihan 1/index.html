@@ -5,18 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>FinalProject0</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700" rel="stylesheet">
-    <script src='script.js'></script>
+
 </head>
 
 <body>
-    <div class="wrapper">
+    <!-- <form id="first" name="formfirst">
+        First name: <input id="name" type="text" name="fname"><br>
+    </form>
+    <button id="show" type="submit">Submit</button> -->
+    <!-- <button id="show">sih</button> -->
+    <div id="sectiontohide" class="wrapper">
         <div id="quiz">
             <h1>Quiz</h1>
             <hr style="margin-bottom: 20px">
-
             <p id="question"></p>
 
             <div class="buttons">
@@ -35,6 +39,21 @@
     <script src="quiz.js"></script>
     <script src="question.js"></script>
     <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <script>
+        $(document).ready(function() {
+            var isian = $("#name").val()
+            $("#show").click(function() {
+                // var isianinput = $("#name").val()
+                if ($("#name").val().length == 0) {
+                    alert("ijnfijfowfei")
+                } else {
+                    $("#sectiontohide").show();
+                    $("#first").hide();
+                }
+            });
+        });
+    </script> -->
 </body>
 
 </html>

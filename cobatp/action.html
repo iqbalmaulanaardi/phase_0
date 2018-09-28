@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="tp">
+        <div id="data">
+        </div>
+    </div>
+
+    <script>
+        function processForm() {
+            var parameters = location.search.substring(1).split("&");
+            var temp = parameters[0].split("=");
+            l = unscape(temp[1]);
+            document.getElementById("data").innerHTML = l;
+        }
+        processForm();
+    </script>
+</body>
+
+</html>
